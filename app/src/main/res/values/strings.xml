@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SumaApp</string>
+    <string name="ejercicio_1">EJERCICIO 1</string>
+    <string name="ejercicio_2">EJERCICIO 2</string>
+    <string name="integrantes">INTEGRANTES</string>
+    <string name="tp_n_1">TP N°1</string>
+    <string name="jose_ignacio_gauna">Jose Ignacio Gauna</string>
+    <string name="pablo_ernesto_gimenez">Pablo Ernesto Gimenez</string>
+    <string name="mariano_benitez_grion">Mariano Benitez Grion</string>
+    <string name="alejandro_gazzo">Alejandro Gazzo</string>
 </resources>
