@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header (TextView) -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TP N°1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- Botones de los ejercicios -->
+    <Button
+        android:id="@+id/btnEjercicio1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EJERCICIO 1" />
+
+    <Button
+        android:id="@+id/btnEjercicio2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EJERCICIO 2"
+        android:layout_marginTop="16dp" />
+
+    <!-- TextView para los nombres de los integrantes -->
+    <TextView
+        android:id="@+id/tvIntegrantes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INTEGRANTES"
+        android:gravity="start"
+        android:layout_marginTop="32dp" />
+
+</LinearLayout>

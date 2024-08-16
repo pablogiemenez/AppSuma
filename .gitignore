@@ -1,0 +1,50 @@
+# Ignore Android Studio files
+.idea/
+*.iml
+.gradle/
+local.properties
+
+# Ignore build output directories
+/build/
+app/build/
+
+# Ignore any generated files
+/captures/
+/.externalNativeBuild/
+/navigation/
+/output.json
+/.cxx/
+/*.apk
+/*.ap_
+/*.keystore
+/*.jks
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore files related to version control systems
+*.swp
+*.swo
+*~
+
+# Ignore Gradle wrapper files
+.gradle/wrapper/dists/
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
