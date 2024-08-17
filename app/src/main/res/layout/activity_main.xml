@@ -19,6 +19,7 @@
 
     <!-- Botones de los ejercicios -->
 
+    <!-- TextView para los nombres de los integrantes -->
     <Button
         android:id="@+id/btnEjercicio1"
         android:layout_width="match_parent"
@@ -29,10 +30,9 @@
         android:id="@+id/btnEjercicio2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ejercicio_2"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:text="@string/ejercicio_2" />
 
-    <!-- TextView para los nombres de los integrantes -->
     <TextView
         android:id="@+id/tvIntegrantes"
         android:layout_width="match_parent"
