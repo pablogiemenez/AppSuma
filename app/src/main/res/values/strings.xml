@@ -8,4 +8,12 @@
     <string name="pablo_ernesto_gimenez">Pablo Ernesto Gimenez</string>
     <string name="mariano_benitez_grion">Mariano Benitez Grion</string>
     <string name="alejandro_gazzo">Alejandro Gazzo</string>
+
+    <!-- Nuevas entradas -->
+    <string name="suma">Suma</string>
+    <string name="primer_numero">Primer número:</string>
+    <string name="segundo_numero">Segundo número:</string>
+    <string name="calcular">Calcular</string>
+    <string name="primer_numero_hint">Ingrese el primer número</string>
+    <string name="segundo_numero_hint">Ingrese el segundo número</string>
 </resources>
