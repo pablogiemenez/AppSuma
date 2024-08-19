@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Ejercicio2Activity extends AppCompatActivity {
     private ImageView btnAtras2;
-
+    private TextView txtCalculadora;
     protected void onCreate (Bundle savedInstanceBundle){
         super.onCreate(savedInstanceBundle);
         EdgeToEdge.enable(this);
@@ -25,6 +26,11 @@ public class Ejercicio2Activity extends AppCompatActivity {
         });
         initVars();
         initListeners();
+
+        txtCalculadora= (TextView) findViewById(R.id.txt_calculadora);
+    }
+    public void borrar(View view){
+        txtCalculadora.setText("0");
     }
 
     //metodo para inicializar la asignacion
