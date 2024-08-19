@@ -14,6 +14,8 @@
     <string name="primer_numero">Primer número:</string>
     <string name="segundo_numero">Segundo número:</string>
     <string name="calcular">Calcular</string>
-    <string name="primer_numero_hint">Ingrese el primer número</string>
-    <string name="segundo_numero_hint">Ingrese el segundo número</string>
+    <string name="primer_numero_hint">Primer número</string>
+    <string name="segundo_numero_hint">Segundo número</string>
+    <string name="calculadora">Calculadora</string>
+    <string name="flecha_atras">flecha_atras</string>
 </resources>

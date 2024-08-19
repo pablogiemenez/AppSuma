@@ -1,68 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <!-- Header (TextView) -->
-    <TextView
-        android:id="@+id/SumaApp"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tp_n_1"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:paddingBottom="16dp" />
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <!-- Botones de los ejercicios -->
+        <ImageView
+            android:id="@+id/btnSalir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/arrow_back_24px" />
 
-    <!-- TextView para los nombres de los integrantes -->
+        <TextView
+            android:id="@+id/txtTP1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/tp_n_1"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
     <Button
         android:id="@+id/btnEjercicio1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/ejercicio_1" />
+        android:layout_width="260dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/ejercicio_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
 
     <Button
         android:id="@+id/btnEjercicio2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/ejercicio_2" />
+        android:layout_width="260dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/ejercicio_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEjercicio1" />
 
     <TextView
-        android:id="@+id/tvIntegrantes"
-        android:layout_width="match_parent"
+        android:id="@+id/txtIntegrantes"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="292dp"
         android:text="@string/integrantes"
-        android:gravity="start"
-        android:layout_marginTop="32dp" />
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEjercicio2" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:id="@+id/txtNombre1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/jose_ignacio_gauna" />
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/alejandro_gazzo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIntegrantes" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
+        android:id="@+id/txtNombre2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pablo_ernesto_gimenez" />
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/jose_ignacio_gauna"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre1" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
+        android:id="@+id/txtNombre3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/mariano_benitez_grion" />
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/mariano_benitez_grion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre2" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
+        android:id="@+id/txtNombre4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/alejandro_gazzo" />
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/pablo_ernesto_gimenez"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre3" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
