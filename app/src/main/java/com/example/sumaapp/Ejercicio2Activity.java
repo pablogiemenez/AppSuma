@@ -27,7 +27,7 @@ public class Ejercicio2Activity extends AppCompatActivity {
         initVars();
         initListeners();
 
-        txtCalculadora= (TextView) findViewById(R.id.txt_calculadora);
+        txtCalculadora= (TextView) findViewById(R.id.txtCalculadora2);
     }
     public void borrar(View view){
         txtCalculadora.setText("0");
