@@ -55,6 +55,11 @@ public class Ejercicio2Activity extends AppCompatActivity {
             valorActual = Double.parseDouble(txtCalculadora.getText().toString());
             txtCalculadora.setText("0");
         });
+        findViewById(R.id.btn_multiclicado).setOnClickListener(view->{
+            operadorActual="*";
+            valorActual=Double.parseDouble(txtCalculadora.getText().toString());
+            txtCalculadora.setText("0");
+        });
 
         findViewById(R.id.btn_igual).setOnClickListener(view -> calcularResultado());
     }
@@ -92,6 +97,9 @@ public class Ejercicio2Activity extends AppCompatActivity {
 
         if (operadorActual.equals("+")) {
             resultado = valorActual + valorNuevo;
+        }
+        if(operadorActual.equals("*")){
+            resultado= valorActual * valorNuevo;
         }
         // Aquí podrías agregar más operadores (restar, multiplicar, dividir)
 
