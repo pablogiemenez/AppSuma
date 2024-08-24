@@ -34,10 +34,22 @@ public class Ejercicio2Activity extends AppCompatActivity {
         // Inicialización de variables
         initVars();
         initListeners();
+    }
 
-        // Configuración inicial del TextView de la calculadora
+    // Método para inicializar la asignación de variables
+    private void initVars() {
+        btnAtras2 = findViewById(R.id.btnAtras2);
         txtCalculadora = findViewById(R.id.txtCalculadora2);
+    }
 
+    // Método para inicializar los listeners
+    private void initListeners() {
+        // Listener para el botón de volver
+        btnAtras2.setOnClickListener(view -> {
+            Intent intent = new Intent(Ejercicio2Activity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Cierra la actividad actual
+        });
         // Configuración de los listeners para los botones de la calculadora
         findViewById(R.id.btn_siete).setOnClickListener(view -> actualizarCalculadora("7"));
         findViewById(R.id.btn_ocho).setOnClickListener(view -> actualizarCalculadora("8"));
@@ -67,23 +79,13 @@ public class Ejercicio2Activity extends AppCompatActivity {
             txtCalculadora.setText("0");
         });
 
-        findViewById(R.id.btn_igual).setOnClickListener(view -> calcularResultado());
-    }
-
-    // Método para inicializar la asignación de variables
-    private void initVars() {
-        btnAtras2 = findViewById(R.id.btnAtras2);
-        txtCalculadora = findViewById(R.id.txtCalculadora2);
-    }
-
-    // Método para inicializar los listeners
-    private void initListeners() {
-        // Listener para el botón de volver
-        btnAtras2.setOnClickListener(view -> {
-            Intent intent = new Intent(Ejercicio2Activity.this, MainActivity.class);
-            startActivity(intent);
-            finish(); // Cierra la actividad actual
+        findViewById(R.id.btn_menos).setOnClickListener(view -> {
+            operadorActual = "-";
+            valorActual = Double.parseDouble(txtCalculadora.getText().toString());
+            txtCalculadora.setText("0");
         });
+
+        findViewById(R.id.btn_igual).setOnClickListener(view -> calcularResultado());
     }
 
     // Método para actualizar el TextView de la calculadora
@@ -119,14 +121,22 @@ public class Ejercicio2Activity extends AppCompatActivity {
                         return;
                     }
                     break;
+                case "-":
+                    resultado = valorActual - valorNuevo;
+                    break;
                 default:
                     txtCalculadora.setText("Operación no válida");
                     return;
             }
 
-            txtCalculadora.setText(String.valueOf(resultado));
+            if(resultado % 1 == 0) {
+                txtCalculadora.setText(String.valueOf((int)resultado));
+            }else{
+                txtCalculadora.setText(String.valueOf(resultado));
+            }
             operadorActual = "";
             valorActual = 0;
+
         } catch (NumberFormatException e) {
             // Manejar el caso en que el valor del TextView no sea un número válido
             txtCalculadora.setText("Error: Formato");
