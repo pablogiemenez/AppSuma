@@ -61,6 +61,12 @@ public class Ejercicio2Activity extends AppCompatActivity {
             txtCalculadora.setText("0");
         });
 
+        findViewById(R.id.btn_dividido).setOnClickListener(view -> {
+            operadorActual = "/";
+            valorActual = Double.parseDouble(txtCalculadora.getText().toString());
+            txtCalculadora.setText("0");
+        });
+
         findViewById(R.id.btn_igual).setOnClickListener(view -> calcularResultado());
     }
 
@@ -92,20 +98,41 @@ public class Ejercicio2Activity extends AppCompatActivity {
 
     // Método para calcular el resultado de la operación
     private void calcularResultado() {
-        double valorNuevo = Double.parseDouble(txtCalculadora.getText().toString());
-        double resultado = 0;
+        try {
+            double valorNuevo = Double.parseDouble(txtCalculadora.getText().toString());
+            double resultado = 0;
 
-        if (operadorActual.equals("+")) {
-            resultado = valorActual + valorNuevo;
-        }
-        if(operadorActual.equals("*")){
-            resultado= valorActual * valorNuevo;
-        }
-        // Aquí podrías agregar más operadores (restar, multiplicar, dividir)
+            switch (operadorActual) {
+                case "+":
+                    resultado = valorActual + valorNuevo;
+                    break;
+                case "*":
+                    resultado = valorActual * valorNuevo;
+                    break;
+                case "/":
+                    if (valorNuevo != 0) {
+                        resultado = valorActual / valorNuevo;
+                    } else {
+                        txtCalculadora.setText("Error: Div/0");
+                        operadorActual = "";
+                        valorActual = 0;
+                        return;
+                    }
+                    break;
+                default:
+                    txtCalculadora.setText("Operación no válida");
+                    return;
+            }
 
-        txtCalculadora.setText(String.valueOf(resultado));
-        operadorActual = "";
-        valorActual = 0;
+            txtCalculadora.setText(String.valueOf(resultado));
+            operadorActual = "";
+            valorActual = 0;
+        } catch (NumberFormatException e) {
+            // Manejar el caso en que el valor del TextView no sea un número válido
+            txtCalculadora.setText("Error: Formato");
+            operadorActual = "";
+            valorActual = 0;
+        }
     }
 
     // Método para borrar el contenido del TextView de la calculadora
